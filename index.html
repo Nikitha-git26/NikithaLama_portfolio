@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nikitha Lama | Portfolio</title>
+<meta name="description" content="Nikitha Lama - Software Developer Portfolio" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          brand: {
+            50: '#eef2ff',
+            100: '#e0e7ff',
+            500: '#6366f1',
+            600: '#4f46e5',
+            700: '#4338ca',
+            900: '#312e81',
+          },
+        },
+        fontFamily: {
+          sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        },
+      },
+    },
+  };
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+<!-- Navbar -->
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+  <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#home" class="text-xl font-extrabold text-slate-900 tracking-tight">Nikitha<span class="text-brand-600">.</span></a>
+
+    <!-- Desktop links -->
+    <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+      <li><a href="#home" class="nav-link hover:text-brand-600 transition-colors">Home</a></li>
+      <li><a href="#about" class="nav-link hover:text-brand-600 transition-colors">About</a></li>
+      <li><a href="#projects" class="nav-link hover:text-brand-600 transition-colors">Projects</a></li>
+      <li><a href="#contact" class="nav-link hover:text-brand-600 transition-colors">Contact</a></li>
+    </ul>
+
+    <div class="hidden md:flex items-center gap-3">
+      <a href="https://drive.google.com/file/d/14D2yxU2S5JqeeqKD_NbNXsw5T22oWpij/view?usp=drive_link" target="_blank" rel="noopener noreferrer"
+         class="inline-flex items-center gap-2 rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition-colors shadow-sm">
+        Resume
+      </a>
+    </div>
+
+    <!-- Mobile menu button -->
+    <button id="menu-btn" aria-label="Toggle menu" aria-expanded="false" class="md:hidden inline-flex items-center justify-center rounded-md p-2 text-slate-700 hover:bg-slate-100">
+      <svg id="icon-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg id="icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white">
+    <ul class="flex flex-col px-6 py-4 gap-4 text-sm font-medium text-slate-700">
+      <li><a href="#home" class="nav-link block hover:text-brand-600">Home</a></li>
+      <li><a href="#about" class="nav-link block hover:text-brand-600">About</a></li>
+      <li><a href="#projects" class="nav-link block hover:text-brand-600">Projects</a></li>
+      <li><a href="#contact" class="nav-link block hover:text-brand-600">Contact</a></li>
+      <li>
+        <a href="https://drive.google.com/file/d/14D2yxU2S5JqeeqKD_NbNXsw5T22oWpij/view?usp=drive_link" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 rounded-full bg-brand-600 px-5 py-2 text-sm font-semibold text-white hover:bg-brand-700 transition-colors">
+          Resume
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section id="home" class="relative overflow-hidden">
+  <div class="absolute inset-0 -z-10 bg-gradient-to-br from-brand-50 via-white to-slate-50"></div>
+  <div class="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-brand-100 blur-3xl opacity-70 -z-10"></div>
+  <div class="absolute top-1/2 -left-24 h-72 w-72 rounded-full bg-indigo-100 blur-3xl opacity-70 -z-10"></div>
+
+  <div class="max-w-6xl mx-auto px-6 py-20 md:py-28 flex flex-col-reverse md:flex-row items-center gap-12">
+    <div class="flex-1 text-center md:text-left fade-in-up">
+      <p class="text-brand-600 font-semibold tracking-wide uppercase text-sm mb-3">Hello, I'm</p>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold text-slate-900 leading-tight">
+        Nikitha Lama
+      </h1>
+      <p class="mt-4 text-lg md:text-xl text-slate-600 max-w-xl mx-auto md:mx-0">
+        Software Engineer experienced in delivering scalable full-stack applications and resilient microservices. Proficient across Java, Python, and React, I specialize in bridging robust backend architecture with seamless user experiences.
+      </p>
+
+      <div class="mt-8 flex flex-wrap items-center justify-center md:justify-start gap-4">
+        <a href="#projects"
+           class="inline-flex items-center gap-2 rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold text-white hover:bg-brand-700 transition-colors shadow-md shadow-brand-600/20">
+          View Projects
+        </a>
+        <a href="#contact"
+           class="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 hover:border-brand-400 hover:text-brand-600 transition-colors">
+          Get In Touch
+        </a>
+      </div>
+
+      <div class="mt-8 flex items-center justify-center md:justify-start gap-5">
+        <a href="https://www.linkedin.com/in/nikitha-lama/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+           class="text-slate-500 hover:text-brand-600 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor">
+            <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
+          </svg>
+        </a>
+        <a href="https://github.com/Nikitha-git266" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+           class="text-slate-500 hover:text-brand-600 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.58 2 12.2c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.46-1.19-1.11-1.51-1.11-1.51-.91-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 2.5-.34c.85 0 1.71.11 2.5.34 1.91-1.32 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.2C22 6.58 17.52 2 12 2z"/>
+          </svg>
+        </a>
+        <a href="mailto:nikithalama@gmail.com" aria-label="Email"
+           class="text-slate-500 hover:text-brand-600 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0-.83.67-1.5 1.5-1.5h16.5c.83 0 1.5.67 1.5 1.5v10.5c0 .83-.67 1.5-1.5 1.5H3.75a1.5 1.5 0 0 1-1.5-1.5V6.75z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="m3 7 9 6 9-6"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="flex-shrink-0 fade-in-up" style="animation-delay:.1s">
+      <div class="relative h-48 w-48 sm:h-60 sm:w-60 md:h-72 md:w-72 rounded-full bg-gradient-to-tr from-brand-500 to-indigo-400 p-1.5 shadow-xl">
+        <img src="photo.jpeg" alt="Nikitha Lama"
+             class="h-full w-full rounded-full object-cover border-4 border-white bg-slate-100" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="bg-white border-y border-slate-200">
+  <div class="max-w-6xl mx-auto px-6 py-16 md:py-20">
+    <div class="max-w-3xl reveal">
+      <h2 class="text-sm font-semibold uppercase tracking-wider text-brand-600">About Me</h2>
+      <p class="mt-2 text-3xl font-bold text-slate-900">A little about who I am</p>
+      <p class="mt-5 text-slate-600 leading-relaxed">
+        I'm Nikitha Lama, a software developer passionate about building end-to-end solutions — from
+        fault-tolerant backend microservices to full-stack web platforms and machine learning pipelines.
+        I enjoy solving real-world problems with clean, scalable code and continuously learning new
+        technologies across the stack.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="max-w-6xl mx-auto px-6 py-16 md:py-20">
+  <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+    <h2 class="text-sm font-semibold uppercase tracking-wider text-brand-600">My Work</h2>
+    <p class="mt-2 text-3xl font-bold text-slate-900">Featured Projects</p>
+    <p class="mt-3 text-slate-600">A selection of projects spanning full-stack development, backend engineering, and applied machine learning.</p>
+  </div>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- Project 1: Nikitha Wexa AI -->
+    <div class="project-card reveal group flex flex-col rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+      <div class="h-2 bg-gradient-to-r from-brand-500 to-indigo-500"></div>
+      <div class="p-6 flex flex-col flex-1">
+        <div class="flex items-start justify-between gap-3">
+          <h3 class="text-lg font-bold text-slate-900">Nikitha Wexa AI</h3>
+          <span class="inline-flex items-center rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold text-emerald-700">Live</span>
+        </div>
+        <p class="mt-3 text-sm text-slate-600 flex-1">
+          A live web application showcasing AI-driven capabilities, deployed and accessible for demonstration.
+        </p>
+        <div class="mt-5 flex flex-wrap gap-3">
+          <a href="https://nikitha-wexa-ai-ql83.vercel.app/" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-700 transition-colors">
+            Visit Live Site
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+          </a>
+          <a href="https://github.com/Nikitha-git26/Nikitha_wexa.ai" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 rounded-full border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-700 hover:border-brand-400 hover:text-brand-600 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.58 2 12.2c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.46-1.19-1.11-1.51-1.11-1.51-.91-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 2.5-.34c.85 0 1.71.11 2.5.34 1.91-1.32 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.2C22 6.58 17.52 2 12 2z"/>
+            </svg>
+            View Code
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2: E-commerce Platform -->
+    <div class="project-card reveal group flex flex-col rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+      <div class="h-2 bg-gradient-to-r from-amber-400 to-orange-400"></div>
+      <div class="p-6 flex flex-col flex-1">
+        <div class="flex items-start justify-between gap-3">
+          <h3 class="text-lg font-bold text-slate-900">E-commerce Platform</h3>
+          <span class="badge-pending inline-flex items-center rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-700">Deployment Pending</span>
+        </div>
+        <p class="mt-3 text-sm text-slate-600 flex-1">
+          A full-featured e-commerce web application. Source code available on GitHub; live deployment is in progress.
+        </p>
+        <div class="mt-5 flex flex-wrap gap-3">
+          <a href="https://github.com/Nikitha-git26/Ecommerce" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 rounded-full border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-700 hover:border-brand-400 hover:text-brand-600 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.58 2 12.2c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.46-1.19-1.11-1.51-1.11-1.51-.91-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 2.5-.34c.85 0 1.71.11 2.5.34 1.91-1.32 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.2C22 6.58 17.52 2 12 2z"/>
+            </svg>
+            View Code
+          </a>
+          <button disabled
+             class="inline-flex items-center gap-2 rounded-full bg-slate-100 px-5 py-2.5 text-sm font-semibold text-slate-400 cursor-not-allowed">
+            Coming Soon
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3: Package Tracking Microservice -->
+    <div class="project-card reveal group flex flex-col rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden">
+      <div class="h-2 bg-gradient-to-r from-sky-500 to-cyan-400"></div>
+      <div class="p-6 flex flex-col flex-1">
+        <div class="flex items-start justify-between gap-3">
+          <h3 class="text-lg font-bold text-slate-900">Package Tracking Microservice</h3>
+          <span class="badge-pending inline-flex items-center rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-700">Link Pending</span>
+        </div>
+        <p class="mt-3 text-sm text-slate-600">
+          Engineered a fault-tolerant distributed microservice with orchestration workflows, scalable REST
+          endpoints, JWT security, and integration tests. Resolved production defects via log analysis.
+        </p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600">Java</span>
+          <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600">Spring Boot</span>
+          <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600">REST API</span>
+          <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600">MySQL</span>
+          <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600">JWT</span>
+          <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600">Postman</span>
+        </div>
+        <div class="mt-5">
+          <button disabled
+             class="inline-flex items-center gap-2 rounded-full bg-slate-100 px-5 py-2.5 text-sm font-semibold text-slate-400 cursor-not-allowed">
+            Coming Soon
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 4: Customer Churn Prediction -->
+    <div class="project-card reveal group flex flex-col rounded-2xl border border-slate-200 bg-white shadow-sm overflow-hidden sm:col-span-2 lg:col-span-1">
+      <div class="h-2 bg-gradient-to-r from-fuchsia-500 to-purple-500"></div>
+      <div class="p-6 flex flex-col flex-1">
+        <div class="flex items-start justify-between gap-3">
+          <h3 class="text-lg font-bold text-slate-900">Customer Churn Prediction</h3>
+          <span class="badge-pending inline-flex items-center rounded-full bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-700">Link Pending</span>
+        </div>
+        <p class="mt-3 text-sm text-slate-600">
+          Built an end-to-end ML pipeline with ETL automation, trained XGBoost/Random Forest models, and
+          deployed a Streamlit dashboard for real-time KPI tracking. Applied A/B testing and root cause analysis.
+        </p>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600">Python</span>
+          <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600">Pandas</span>
+          <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600">SQL</span>
+          <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600">Scikit-learn</span>
+          <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600">XGBoost</span>
+          <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600">Power BI</span>
+          <span class="rounded-md bg-slate-100 px-2.5 py-1 text-xs font-medium text-slate-600">Streamlit</span>
+        </div>
+        <div class="mt-5">
+          <button disabled
+             class="inline-flex items-center gap-2 rounded-full bg-slate-100 px-5 py-2.5 text-sm font-semibold text-slate-400 cursor-not-allowed">
+            Coming Soon
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="bg-gradient-to-br from-brand-50 via-white to-slate-50 border-t border-slate-200">
+  <div class="max-w-6xl mx-auto px-6 py-16 md:py-20">
+    <div class="text-center reveal">
+      <h2 class="text-sm font-semibold uppercase tracking-wider text-brand-600">Get In Touch</h2>
+      <p class="mt-2 text-3xl font-bold text-slate-900">Let's work together</p>
+      <p class="mt-3 text-slate-600 max-w-xl mx-auto">
+        I'm open to new opportunities and collaborations. Send a message below, or reach out directly through any of the channels.
+      </p>
+
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="mailto:nikithalama@gmail.com"
+           class="inline-flex items-center gap-2 rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold text-white hover:bg-brand-700 transition-colors shadow-sm">
+          nikithalama@gmail.com
+        </a>
+        <a href="tel:8838491590"
+           class="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 hover:border-brand-400 hover:text-brand-600 transition-colors">
+          +91 88384 91590
+        </a>
+      </div>
+
+      <div class="mt-8 flex items-center justify-center gap-6">
+        <a href="https://www.linkedin.com/in/nikitha-lama/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+           class="text-slate-500 hover:text-brand-600 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor">
+            <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
+          </svg>
+        </a>
+        <a href="https://github.com/Nikitha-git266" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+           class="text-slate-500 hover:text-brand-600 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="currentColor">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.48 2 2 6.58 2 12.2c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.46-1.19-1.11-1.51-1.11-1.51-.91-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 2.5-.34c.85 0 1.71.11 2.5.34 1.91-1.32 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.2C22 6.58 17.52 2 12 2z"/>
+          </svg>
+        </a>
+        <a href="https://drive.google.com/file/d/14D2yxU2S5JqeeqKD_NbNXsw5T22oWpij/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Resume"
+           class="text-slate-500 hover:text-brand-600 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6M9 8h1M5 21h14a2 2 0 0 0 2-2V7.5L15.5 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <form id="contact-form" action="https://formspree.io/f/mgawpglq" method="POST"
+          class="reveal mt-12 max-w-xl mx-auto rounded-2xl border border-slate-200 bg-white p-6 sm:p-8 shadow-sm">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <div>
+          <label for="name" class="block text-sm font-medium text-slate-700 mb-1.5">Name</label>
+          <input type="text" id="name" name="name" required
+                 class="w-full rounded-lg border border-slate-300 px-4 py-2.5 text-sm text-slate-900 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:outline-none transition-colors" />
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium text-slate-700 mb-1.5">Email</label>
+          <input type="email" id="email" name="email" required
+                 class="w-full rounded-lg border border-slate-300 px-4 py-2.5 text-sm text-slate-900 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:outline-none transition-colors" />
+        </div>
+      </div>
+      <div class="mt-5">
+        <label for="message" class="block text-sm font-medium text-slate-700 mb-1.5">Message</label>
+        <textarea id="message" name="message" rows="4" required
+                  class="w-full rounded-lg border border-slate-300 px-4 py-2.5 text-sm text-slate-900 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20 focus:outline-none transition-colors resize-none"></textarea>
+      </div>
+      <button type="submit"
+              class="mt-6 w-full inline-flex items-center justify-center gap-2 rounded-full bg-brand-600 px-6 py-3 text-sm font-semibold text-white hover:bg-brand-700 transition-colors shadow-sm">
+        Send Message
+      </button>
+      <p id="form-status" class="mt-3 text-center text-sm" aria-live="polite"></p>
+    </form>
+  </div>
+
+  <footer class="border-t border-slate-200">
+    <div class="max-w-6xl mx-auto px-6 py-6 flex items-center justify-center">
+      <p class="text-sm text-slate-500">&copy; <span id="year"></span> Nikitha Lama. All rights reserved.</p>
+    </div>
+  </footer>
+</section>
+
+<script src="script.js"></script>
+<script defer src="/_vercel/insights/script.js"></script>
+</body>
+</html>
